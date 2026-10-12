@@ -1,0 +1,40 @@
+# Codex CLI - cost-conscious defaults. Merge into ~/.codex/config.toml.
+# Keep your existing provider / auth / MCP / project lines; this file doesn't set them.
+# TOML rule: top-level keys must come BEFORE the first [table], or they land inside it.
+
+# Everyday model: the cheapest one that does the job. Switch per session with /model.
+model = "<your everyday Codex model>"
+
+# Reasoning tokens are billed as output. medium for normal work, high only while planning.
+model_reasoning_effort = "medium"
+plan_mode_reasoning_effort = "high"
+
+# Shorter answers = fewer output tokens.
+model_verbosity = "low"
+
+# Summarise history before the context grows huge (every turn re-sends it all).
+model_auto_compact_token_limit = 150000
+
+# Optional: no web search unless you need it.
+# web_search = "disabled"
+
+# Never set service_tier = "fast" (it maps to the priority tier, billed at a premium);
+# /fast toggles it and saves the choice - check /status if costs jump.
+
+# Provider example (only if you run Codex through Amazon Bedrock and don't have this already):
+# model_provider = "amazon-bedrock"
+# [model_providers.amazon-bedrock.aws]
+# profile = "<aws profile>"
+# region = "<aws region>"
+
+[agents]
+# Multi-agent is on by default; each spawned agent carries its own context.
+max_concurrent_threads_per_session = 2
+default_subagent_reasoning_effort = "low"
+# default_subagent_model = "<a cheaper model>"
+
+[features]
+# Optional: stop automatic goal continuation (extra turns you didn't ask for).
+# goals = false
+# Optional: turn off app/connector integrations you don't use.
+# apps = false

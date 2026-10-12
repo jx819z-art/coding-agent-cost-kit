@@ -1,0 +1,18 @@
+{
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_MODEL": "<your Sonnet 5.5 ID>",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "<your Sonnet 5.5 ID>",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "<your Opus 5.5 ID>",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "<your Haiku 5.5 ID>",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL_SUPPORTED_CAPABILITIES": "",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "<your Sonnet 5.5 ID>",
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "200000",
+    "ENABLE_PROMPT_CACHING_1H": "1",
+    "CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION": "false",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_TELEMETRY": "1"
+  },
+  "effortLevel": "medium",
+  "skipWebFetchPreflight": true
+}
